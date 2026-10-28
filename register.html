@@ -1,0 +1,95 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Syed, Billal, Oishe & Hasan" />
+  <title>Cricket Australia Blog - Register</title>
+
+  <!-- External CSS file for styling -->
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- External JS file for register validation -->
+  <script defer src="scripts/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Top banner with site logo and site name -->
+    <div class="banner-container">
+      <!-- Dark/Light Theme Toggle Button -->
+      <button id="themeToggleBtn" title="Toggle Dark/Light Mode">Dark Mode 🌓</button>
+      <img src="images/banner.webp" alt="Cricket Banner" class="banner" />
+      <img src="images/logo.jpg" alt="Cricket Blog Logo" class="logo-over-banner" />
+      <h1 class="banner-text">Cricket Pulse</h1>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="older.html">Older Posts</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+      <li><a href="write.html">Write Post</a></li>
+      <li><a href="our_story.html">Our Story</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+    <!-- Page Title and Tagline -->
+    <h1>Create a New Account</h1>
+    <p class="register-tagline">Join the Cricket Pulse and be part of Australia’s cricketing heartbeat!</p>
+
+    <!-- Registration Form Section -->
+    <form id="registerForm" novalidate>
+      <!-- Username Field -->
+      <label for="regUsername">Username:</label>
+      <input type="text" id="regUsername" name="regUsername" />
+
+      <!-- Email Field -->
+      <label for="regEmail">Email:</label>
+      <input type="email" id="regEmail" name="regEmail" />
+
+      <!-- Password Field -->
+      <label for="regPassword">Password:</label>
+      <div class="password-wrapper">
+        <input type="password" id="regPassword" name="regPassword" />
+        <button type="button" class="toggle-password" onclick="togglePassword('regPassword', this)">Show</button>
+      </div>
+
+      <!-- Confirm Password Field -->
+      <label for="confirmPassword">Confirm Password:</label>
+      <div class="password-wrapper">
+        <input type="password" id="confirmPassword" name="confirmPassword" />
+        <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword', this)">Show</button>
+      </div>
+
+
+      <!-- Submit and Reset Buttons -->
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+
+      <!-- Error Message Display -->
+      <p class="error-message" id="registerError"></p>
+    </form>
+
+    <!-- Link to login page for old users -->
+    <p>Already have an account? <a href="login.html">Login here</a>.</p>
+  </main>
+
+  <footer>
+    <!-- Footer Section -->
+    <p>&copy; 2025 Cricket Australia Blog | Designed by Syed, Billal, Oishe & Hasan</p>
+  </footer>
+
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollTopBtn" title="Back to Top">↑</button>
+
+</body>
+
+</html>
